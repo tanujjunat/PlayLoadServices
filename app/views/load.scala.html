@@ -1,0 +1,9 @@
+@(form: Form[PollutionLevel])
+<p>Want to Check Pollution Level Data. Click submit</p>
+@helper.form(routes.LoadController.getPollutionData) {
+        @helper.CSRF.formField
+
+        @helper.inputText(form("level"))
+
+        <button type="submit">Submit</button>
+    }
